@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>卓尔 · 第一个网页</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23F6F4EF'/%3E%3Crect x='7' y='7' width='5' height='18' fill='%232F5D50'/%3E%3Crect x='7' y='22' width='18' height='3' fill='%232F5D50'/%3E%3C/svg%3E">
+<style>
+  :root{
+    --paper:#F6F4EF;
+    --ink:#17181A;
+    --muted:#6C6A64;
+    --line:#DBD6CB;
+    --accent:#2F5D50;
+    --serif:"Songti SC","STSong","SimSun",Georgia,serif;
+    --sans:"PingFang SC","Microsoft YaHei","Hiragino Sans GB",system-ui,-apple-system,sans-serif;
+  }
+  *{box-sizing:border-box;}
+  html{-webkit-text-size-adjust:100%;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:var(--sans);
+    font-size:16px;
+    line-height:1.85;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{
+    max-width:740px;
+    margin:0 auto;
+    padding:44px 22px 56px;
+  }
+
+  /* ===== 页首 ===== */
+  .hero h1{
+    font-family:var(--serif);
+    font-weight:400;
+    font-size:42px;
+    line-height:1.12;
+    letter-spacing:.03em;
+    margin:0 0 14px;
+  }
+  .hero .rule{
+    width:44px;
+    height:3px;
+    background:var(--accent);
+    margin:0 0 22px;
+  }
+  .hero .lead{
+    font-size:17px;
+    margin:0 0 10px;
+    max-width:32em;
+  }
+  .hero .meta{
+    color:var(--muted);
+    font-size:14px;
+    margin:0;
+  }
+
+  /* ===== 区块 ===== */
+  .section{
+    border-top:1px solid var(--line);
+    margin-top:46px;
+    padding-top:26px;
+  }
+  .section h2{
+    font-family:var(--serif);
+    font-weight:400;
+    font-size:21px;
+    letter-spacing:.02em;
+    margin:0 0 14px;
+  }
+  .section p{
+    margin:0 0 14px;
+    max-width:34em;
+  }
+  .section p:last-child{margin-bottom:0;}
+  .section p .em{color:var(--accent);}
+
+  /* ===== 条目 ===== */
+  .items{margin:0;}
+  .item{
+    padding:16px 0;
+    border-top:1px solid var(--line);
+  }
+  .item:first-child{border-top:0;padding-top:2px;}
+  .item h3{
+    font-size:16px;
+    font-weight:600;
+    margin:0 0 4px;
+  }
+  .item p{
+    margin:0;
+    color:var(--muted);
+    font-size:15px;
+    max-width:36em;
+  }
+
+  /* ===== 参数表 ===== */
+  .facts{
+    margin:0;
+    border-top:1px solid var(--line);
+  }
+  .fact{
+    display:flex;
+    justify-content:space-between;
+    gap:18px;
+    padding:11px 0;
+    border-bottom:1px solid var(--line);
+    font-size:15px;
+  }
+  .fact dt{color:var(--muted);flex:0 0 auto;}
+  .fact dd{margin:0;text-align:right;word-break:break-all;}
+
+  /* ===== 链接 ===== */
+  a{
+    color:var(--accent);
+    text-decoration:none;
+    border-bottom:1px solid rgba(47,93,80,.4);
+    padding-bottom:1px;
+  }
+  a:hover{border-bottom-color:var(--accent);}
+
+  .foot{
+    margin-top:52px;
+    padding-top:18px;
+    border-top:1px solid var(--line);
+    color:var(--muted);
+    font-size:13px;
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px 18px;
+  }
+
+  @media (min-width:768px){
+    .wrap{padding:72px 32px 80px;}
+    .hero h1{font-size:56px;}
+    .hero .lead{font-size:19px;}
+    .section{margin-top:60px;padding-top:32px;}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="hero">
+    <h1>卓尔</h1>
+    <div class="rule" aria-hidden="true"></div>
+    <p class="lead">把想法做成看得见的东西。这是我在 GitHub 上的第一个页面，一个单文件网页。</p>
+    <p class="meta">西安 · 2026 年 11 月</p>
+  </header>
+
+  <section class="section">
+    <h2>这一页是什么</h2>
+    <p>它没有后台、没有数据库，就是一个 HTML 文件。文件放在 GitHub 的仓库 <span class="em">zhuoer-code/code</span> 里，由 GitHub Pages 免费发布成网址。</p>
+    <p>你在屏幕上读到的每个字，都来自仓库里那份文件的原文。改文件、提交、推送，等几十秒刷新，页面就变成新的样子。</p>
+  </section>
+
+  <section class="section">
+    <h2>可以往里放什么</h2>
+    <div class="items">
+      <div class="item">
+        <h3>自我介绍</h3>
+        <p>一段话就够：你是谁、在做什么、希望别人记住你哪一点。不用写成简历。</p>
+      </div>
+      <div class="item">
+        <h3>作品</h3>
+        <p>做过的东西，一张截图加一句说明，或者直接链到另一个页面。</p>
+      </div>
+      <div class="item">
+        <h3>联系方式</h3>
+        <p>邮箱或账号。放进来的东西所有人可见，不想公开的就别放。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>当前这一页的参数</h2>
+    <dl class="facts">
+      <div class="fact"><dt>托管方式</dt><dd>GitHub Pages</dd></div>
+      <div class="fact"><dt>仓库</dt><dd><a href="https://github.com/zhuoer-code/code">zhuoer-code/code</a></dd></div>
+      <div class="fact"><dt>文件数量</dt><dd>1 个 HTML</dd></div>
+      <div class="fact"><dt>外部依赖</dt><dd>无</dd></div>
+      <div class="fact"><dt>费用</dt><dd>0 元</dd></div>
+    </dl>
+  </section>
+
+  <footer class="foot">
+    <span>最后更新：2026-11-08</span>
+    <span>内容为示范，替换成你自己的即可</span>
+  </footer>
+
+</div>
+</body>
+</html>
